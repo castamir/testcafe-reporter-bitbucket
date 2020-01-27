@@ -1,60 +1,47 @@
 {
   "name": "testcafe-reporter-bitbucket",
   "version": "0.1.0",
-  "description": "Testcafe reporter for Bitbucket",
-  "author": "Miroslav Paulík",
-  "license": "MIT",
-  "main": "./dist/lib/index.js",
-  "types": "./dist/lib/index.d.ts",
-  "jest": {
-    "collectCoverageFrom": [
-      "src/**/*.{js,jsx,ts,tsx}",
-      "!**/types/**",
-      "!**/*.spec.{ts,tsx}",
-      "!**/*.spec.{tsx}.snap"
-    ],
-    "coverageReporters": [
-      "lcov"
-    ],
-    "transform": {
-      "^.+\\.tsx?$": "babel-jest"
+  "description": "TestCafe reporter plugin for Bitbucket pipelines.",
+  "repository": "https://github.com/castamir/testcafe-reporter-bitbucket",
+  "authors": [
+    {
+      "name": "Developer Express Inc.",
+      "url": "https://devexpress.com"
+    },
+    {
+      "name": "Miroslav Paulík",
+      "url": "https://github.com/castamir"
     }
-  },
+  ],
+  "main": "lib/index",
+  "files": [
+    "lib"
+  ],
   "scripts": {
-    "watch": "yarn clean && yarn ts:declaration --watch & yarn transpile --watch --verbose",
-    "build": "yarn clean && yarn ts:declaration && yarn transpile",
-    "clean": "rimraf coverage dist",
-    "transpile": "BABEL_ENV=production babel src -d --out-dir dist/lib --source-maps inline --extensions '.js,.jsx,.ts,.tsx'",
-    "ts:declaration": "tsc --project tsconfig.build.json",
-    "ts:check": "tsc",
-    "lint": "eslint --ext ts,tsx,js src",
-    "test": "jest --coverage --watchAll=false --verbose false src",
-    "format": "prettier src/**/*.ts --write",
-    "prepublish": "yarn ts:check && yarn test && yarn build"
+    "test": "gulp test",
+    "publish-please": "publish-please",
+    "prepublish": "publish-please guard"
   },
-  "dependencies": {
-    "indent-string": "~4.0.0",
-    "lodash": "~4.17.15",
-    "normalize-newline": "^3.0.0"
-  },
+  "keywords": [
+    "testcafe",
+    "reporter",
+    "plugin",
+    "xunit",
+    "junit",
+    "nunit"
+  ],
+  "license": "MIT",
   "devDependencies": {
-    "@babel/core": "~7.3.4",
-    "@babel/cli": "~7.2.2",
-    "@babel/preset-env": "^7.8.3",
-    "@types/jest": "~24.9.0",
-    "@types/lodash": "~4.14.144",
-    "@typescript-eslint/eslint-plugin": "^2.17.0",
-    "@typescript-eslint/parser": "^2.17.0",
-    "babel-jest": "^25.1.0",
+    "babel-eslint": "^4.0.10",
     "callsite-record": "^3.2.0",
-    "eslint": "^6.8.0",
-    "eslint-config-prettier": "^6.9.0",
-    "eslint-plugin-import": "^2.20.0",
-    "eslint-plugin-prettier": "^3.1.2",
-    "jest": "^25.1.0",
-    "prettier": "^1.19.1",
-    "rimraf": "^3.0.0",
-    "testcafe": "0.9.0",
-    "typescript": "^3.7.5"
+    "del": "^1.2.0",
+    "gulp": "^3.9.0",
+    "gulp-babel": "^5.2.1",
+    "gulp-eslint": "^1.1.1",
+    "gulp-mocha": "^2.2.0",
+    "normalize-newline": "^1.0.2",
+    "publish-please": "^2.1.4",
+    "read-file-relative": "^1.2.0",
+    "testcafe": "0.9.0"
   }
 }
