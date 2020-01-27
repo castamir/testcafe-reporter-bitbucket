@@ -1,3 +1,3 @@
-import { bitbucketReporter } from './bitbucket-reporter/reporter';
+import { bitbucketReporter } from "./bitbucket-reporter/reporter";
 
 export default bitbucketReporter;

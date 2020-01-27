@@ -1,7 +1,7 @@
 export const bitbucketReporter = () => {
   return {
     noColors: true,
-    report: '',
+    report: "",
     startTime: null,
     uaList: null,
     currentFixtureName: null,
@@ -10,7 +10,7 @@ export const bitbucketReporter = () => {
 
     reportTaskStart(startTime, userAgents, testCount) {
       this.startTime = startTime;
-      this.uaList = userAgents.join(', ');
+      this.uaList = userAgents.join(", ");
       this.testCount = testCount;
     },
 
@@ -21,31 +21,31 @@ export const bitbucketReporter = () => {
 
     _renderErrors(errs) {
       // @ts-ignore
-      this.report += this.indentString('<failure>\n', 4);
+      this.report += this.indentString("<failure>\n", 4);
       // @ts-ignore
-      this.report += this.indentString('<![CDATA[', 4);
+      this.report += this.indentString("<![CDATA[", 4);
 
       errs.forEach((err, idx) => {
         // @ts-ignore
         err = this.formatError(err, `${idx + 1}) `);
 
-        this.report += '\n';
+        this.report += "\n";
         // @ts-ignore
         this.report += this.indentString(err, 6);
-        this.report += '\n';
+        this.report += "\n";
       });
 
       // @ts-ignore
-      this.report += this.indentString(']]>\n', 4);
+      this.report += this.indentString("]]>\n", 4);
       // @ts-ignore
-      this.report += this.indentString('</failure>\n', 4);
+      this.report += this.indentString("</failure>\n", 4);
     },
 
     reportTestDone(name, testRunInfo) {
       var hasErr = !!testRunInfo.errs.length;
 
       if (testRunInfo.unstable) {
-        name += ' (unstable)';
+        name += " (unstable)";
       }
 
       if (testRunInfo.screenshotPath) {
@@ -65,21 +65,21 @@ export const bitbucketReporter = () => {
       if (testRunInfo.skipped) {
         this.skipped++;
         // @ts-ignore
-        this.report += this.indentString('<skipped/>\n', 4);
+        this.report += this.indentString("<skipped/>\n", 4);
       } else if (hasErr) {
         this._renderErrors(testRunInfo.errs);
       }
 
       // @ts-ignore
-      this.report += this.indentString('</testcase>\n', 2);
+      this.report += this.indentString("</testcase>\n", 2);
     },
 
     _renderWarnings(warnings) {
       // @ts-ignore
       this.setIndent(2)
-        .write('<system-out>')
+        .write("<system-out>")
         .newline()
-        .write('<![CDATA[')
+        .write("<![CDATA[")
         .newline()
         .setIndent(4)
         .write(`Warnings (${warnings.length}):`)
@@ -88,7 +88,7 @@ export const bitbucketReporter = () => {
       warnings.forEach(msg => {
         // @ts-ignore
         this.setIndent(4)
-          .write('--')
+          .write("--")
           .newline()
           .setIndent(0)
           // @ts-ignore
@@ -98,9 +98,9 @@ export const bitbucketReporter = () => {
 
       // @ts-ignore
       this.setIndent(2)
-        .write(']]>')
+        .write("]]>")
         .newline()
-        .write('</system-out>')
+        .write("</system-out>")
         .newline();
     },
 
@@ -126,7 +126,7 @@ export const bitbucketReporter = () => {
       }
 
       // @ts-ignore
-      this.setIndent(0).write('</testsuite>');
-    },
+      this.setIndent(0).write("</testsuite>");
+    }
   };
 };

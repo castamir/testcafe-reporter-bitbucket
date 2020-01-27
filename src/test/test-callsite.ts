@@ -1,7 +1,7 @@
-import createCallSiteRecord from 'callsite-record';
+import createCallSiteRecord from "callsite-record";
 
 function someFunc() {
-  throw new Error('Hey ya!');
+  throw new Error("Hey ya!");
 }
 
 let result;

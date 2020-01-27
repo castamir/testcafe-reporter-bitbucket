@@ -15,10 +15,10 @@ exports[`bitbucket reporter should produce report with colors 1`] = `
          Browser: Chrome 41.0.2227 / Mac OS X 10.10.1
          Screenshot: /screenshots/1445437598847/errors
 
-            1 |import createCallSiteRecord from 'callsite-record';
+            1 |import createCallSiteRecord from \\"callsite-record\\";
             2 |
             3 |function someFunc() {
-          > 4 |  throw new Error('Hey ya!');
+          > 4 |  throw new Error(\\"Hey ya!\\");
             5 |}
             6 |
             7 |let result;
@@ -26,11 +26,6 @@ exports[`bitbucket reporter should produce report with colors 1`] = `
             9 |try {
 
             at someFunc (some-file:1:1)
-            at Object.someFunc (some-file:1:1)
-            at Runtime._execModule (some-file:1:1)
-            at Runtime._loadModule (some-file:1:1)
-            at Runtime.requireModule (some-file:1:1)
-            at Runtime.requireModuleOrMock (some-file:1:1)
             at Object.<anonymous> (some-file:1:1)
             at Runtime._execModule (some-file:1:1)
             at Runtime._loadModule (some-file:1:1)
@@ -45,25 +40,22 @@ exports[`bitbucket reporter should produce report with colors 1`] = `
             at Runtime._execModule (some-file:1:1)
             at Runtime._loadModule (some-file:1:1)
             at Runtime.requireModule (some-file:1:1)
-            at <anonymous> (some-file:1:1)
-            at asyncGeneratorStep (some-file:1:1)
-            at _next (some-file:1:1)
-            at <anonymous> (some-file:1:1)
-            at <anonymous> (some-file:1:1)
-            at _jasmine (some-file:1:1)
+            at Runtime.requireModuleOrMock (some-file:1:1)
+            at Object.<anonymous> (some-file:1:1)
+            at Runtime._execModule (some-file:1:1)
+            at Runtime._loadModule (some-file:1:1)
+            at Runtime.requireModule (some-file:1:1)
             at jasmine2 (some-file:1:1)
-            at <anonymous> (some-file:1:1)
-            at asyncGeneratorStep (some-file:1:1)
-            at _next (some-file:1:1)
+            at runTestInternal (some-file:1:1)
 
       2) The specified selector does not match any element in the DOM tree.
 
          Browser: Firefox 47 / Mac OS X 10.10.1
 
-            1 |import createCallSiteRecord from 'callsite-record';
+            1 |import createCallSiteRecord from \\"callsite-record\\";
             2 |
             3 |function someFunc() {
-          > 4 |  throw new Error('Hey ya!');
+          > 4 |  throw new Error(\\"Hey ya!\\");
             5 |}
             6 |
             7 |let result;
@@ -71,11 +63,6 @@ exports[`bitbucket reporter should produce report with colors 1`] = `
             9 |try {
 
             at someFunc (some-file:1:1)
-            at Object.someFunc (some-file:1:1)
-            at Runtime._execModule (some-file:1:1)
-            at Runtime._loadModule (some-file:1:1)
-            at Runtime.requireModule (some-file:1:1)
-            at Runtime.requireModuleOrMock (some-file:1:1)
             at Object.<anonymous> (some-file:1:1)
             at Runtime._execModule (some-file:1:1)
             at Runtime._loadModule (some-file:1:1)
@@ -90,16 +77,13 @@ exports[`bitbucket reporter should produce report with colors 1`] = `
             at Runtime._execModule (some-file:1:1)
             at Runtime._loadModule (some-file:1:1)
             at Runtime.requireModule (some-file:1:1)
-            at <anonymous> (some-file:1:1)
-            at asyncGeneratorStep (some-file:1:1)
-            at _next (some-file:1:1)
-            at <anonymous> (some-file:1:1)
-            at <anonymous> (some-file:1:1)
-            at _jasmine (some-file:1:1)
+            at Runtime.requireModuleOrMock (some-file:1:1)
+            at Object.<anonymous> (some-file:1:1)
+            at Runtime._execModule (some-file:1:1)
+            at Runtime._loadModule (some-file:1:1)
+            at Runtime.requireModule (some-file:1:1)
             at jasmine2 (some-file:1:1)
-            at <anonymous> (some-file:1:1)
-            at asyncGeneratorStep (some-file:1:1)
-            at _next (some-file:1:1)
+            at runTestInternal (some-file:1:1)
     ]]>
     </failure>
   </testcase>
@@ -120,10 +104,10 @@ exports[`bitbucket reporter should produce report with colors 1`] = `
 
          Browser: Firefox 47 / Mac OS X 10.10.1
 
-            1 |import createCallSiteRecord from 'callsite-record';
+            1 |import createCallSiteRecord from \\"callsite-record\\";
             2 |
             3 |function someFunc() {
-          > 4 |  throw new Error('Hey ya!');
+          > 4 |  throw new Error(\\"Hey ya!\\");
             5 |}
             6 |
             7 |let result;
@@ -131,11 +115,6 @@ exports[`bitbucket reporter should produce report with colors 1`] = `
             9 |try {
 
             at someFunc (some-file:1:1)
-            at Object.someFunc (some-file:1:1)
-            at Runtime._execModule (some-file:1:1)
-            at Runtime._loadModule (some-file:1:1)
-            at Runtime.requireModule (some-file:1:1)
-            at Runtime.requireModuleOrMock (some-file:1:1)
             at Object.<anonymous> (some-file:1:1)
             at Runtime._execModule (some-file:1:1)
             at Runtime._loadModule (some-file:1:1)
@@ -150,16 +129,13 @@ exports[`bitbucket reporter should produce report with colors 1`] = `
             at Runtime._execModule (some-file:1:1)
             at Runtime._loadModule (some-file:1:1)
             at Runtime.requireModule (some-file:1:1)
-            at <anonymous> (some-file:1:1)
-            at asyncGeneratorStep (some-file:1:1)
-            at _next (some-file:1:1)
-            at <anonymous> (some-file:1:1)
-            at <anonymous> (some-file:1:1)
-            at _jasmine (some-file:1:1)
+            at Runtime.requireModuleOrMock (some-file:1:1)
+            at Object.<anonymous> (some-file:1:1)
+            at Runtime._execModule (some-file:1:1)
+            at Runtime._loadModule (some-file:1:1)
+            at Runtime.requireModule (some-file:1:1)
             at jasmine2 (some-file:1:1)
-            at <anonymous> (some-file:1:1)
-            at asyncGeneratorStep (some-file:1:1)
-            at _next (some-file:1:1)
+            at runTestInternal (some-file:1:1)
     ]]>
     </failure>
   </testcase>
@@ -196,10 +172,10 @@ exports[`bitbucket reporter should produce report without colors 1`] = `
          Browser: Chrome 41.0.2227 / Mac OS X 10.10.1
          Screenshot: /screenshots/1445437598847/errors
 
-            1 |import createCallSiteRecord from 'callsite-record';
+            1 |import createCallSiteRecord from \\"callsite-record\\";
             2 |
             3 |function someFunc() {
-          > 4 |  throw new Error('Hey ya!');
+          > 4 |  throw new Error(\\"Hey ya!\\");
             5 |}
             6 |
             7 |let result;
@@ -207,11 +183,6 @@ exports[`bitbucket reporter should produce report without colors 1`] = `
             9 |try {
 
             at someFunc (some-file:1:1)
-            at Object.someFunc (some-file:1:1)
-            at Runtime._execModule (some-file:1:1)
-            at Runtime._loadModule (some-file:1:1)
-            at Runtime.requireModule (some-file:1:1)
-            at Runtime.requireModuleOrMock (some-file:1:1)
             at Object.<anonymous> (some-file:1:1)
             at Runtime._execModule (some-file:1:1)
             at Runtime._loadModule (some-file:1:1)
@@ -226,25 +197,22 @@ exports[`bitbucket reporter should produce report without colors 1`] = `
             at Runtime._execModule (some-file:1:1)
             at Runtime._loadModule (some-file:1:1)
             at Runtime.requireModule (some-file:1:1)
-            at <anonymous> (some-file:1:1)
-            at asyncGeneratorStep (some-file:1:1)
-            at _next (some-file:1:1)
-            at <anonymous> (some-file:1:1)
-            at <anonymous> (some-file:1:1)
-            at _jasmine (some-file:1:1)
+            at Runtime.requireModuleOrMock (some-file:1:1)
+            at Object.<anonymous> (some-file:1:1)
+            at Runtime._execModule (some-file:1:1)
+            at Runtime._loadModule (some-file:1:1)
+            at Runtime.requireModule (some-file:1:1)
             at jasmine2 (some-file:1:1)
-            at <anonymous> (some-file:1:1)
-            at asyncGeneratorStep (some-file:1:1)
-            at _next (some-file:1:1)
+            at runTestInternal (some-file:1:1)
 
       2) The specified selector does not match any element in the DOM tree.
 
          Browser: Firefox 47 / Mac OS X 10.10.1
 
-            1 |import createCallSiteRecord from 'callsite-record';
+            1 |import createCallSiteRecord from \\"callsite-record\\";
             2 |
             3 |function someFunc() {
-          > 4 |  throw new Error('Hey ya!');
+          > 4 |  throw new Error(\\"Hey ya!\\");
             5 |}
             6 |
             7 |let result;
@@ -252,11 +220,6 @@ exports[`bitbucket reporter should produce report without colors 1`] = `
             9 |try {
 
             at someFunc (some-file:1:1)
-            at Object.someFunc (some-file:1:1)
-            at Runtime._execModule (some-file:1:1)
-            at Runtime._loadModule (some-file:1:1)
-            at Runtime.requireModule (some-file:1:1)
-            at Runtime.requireModuleOrMock (some-file:1:1)
             at Object.<anonymous> (some-file:1:1)
             at Runtime._execModule (some-file:1:1)
             at Runtime._loadModule (some-file:1:1)
@@ -271,16 +234,13 @@ exports[`bitbucket reporter should produce report without colors 1`] = `
             at Runtime._execModule (some-file:1:1)
             at Runtime._loadModule (some-file:1:1)
             at Runtime.requireModule (some-file:1:1)
-            at <anonymous> (some-file:1:1)
-            at asyncGeneratorStep (some-file:1:1)
-            at _next (some-file:1:1)
-            at <anonymous> (some-file:1:1)
-            at <anonymous> (some-file:1:1)
-            at _jasmine (some-file:1:1)
+            at Runtime.requireModuleOrMock (some-file:1:1)
+            at Object.<anonymous> (some-file:1:1)
+            at Runtime._execModule (some-file:1:1)
+            at Runtime._loadModule (some-file:1:1)
+            at Runtime.requireModule (some-file:1:1)
             at jasmine2 (some-file:1:1)
-            at <anonymous> (some-file:1:1)
-            at asyncGeneratorStep (some-file:1:1)
-            at _next (some-file:1:1)
+            at runTestInternal (some-file:1:1)
     ]]>
     </failure>
   </testcase>
@@ -301,10 +261,10 @@ exports[`bitbucket reporter should produce report without colors 1`] = `
 
          Browser: Firefox 47 / Mac OS X 10.10.1
 
-            1 |import createCallSiteRecord from 'callsite-record';
+            1 |import createCallSiteRecord from \\"callsite-record\\";
             2 |
             3 |function someFunc() {
-          > 4 |  throw new Error('Hey ya!');
+          > 4 |  throw new Error(\\"Hey ya!\\");
             5 |}
             6 |
             7 |let result;
@@ -312,11 +272,6 @@ exports[`bitbucket reporter should produce report without colors 1`] = `
             9 |try {
 
             at someFunc (some-file:1:1)
-            at Object.someFunc (some-file:1:1)
-            at Runtime._execModule (some-file:1:1)
-            at Runtime._loadModule (some-file:1:1)
-            at Runtime.requireModule (some-file:1:1)
-            at Runtime.requireModuleOrMock (some-file:1:1)
             at Object.<anonymous> (some-file:1:1)
             at Runtime._execModule (some-file:1:1)
             at Runtime._loadModule (some-file:1:1)
@@ -331,16 +286,13 @@ exports[`bitbucket reporter should produce report without colors 1`] = `
             at Runtime._execModule (some-file:1:1)
             at Runtime._loadModule (some-file:1:1)
             at Runtime.requireModule (some-file:1:1)
-            at <anonymous> (some-file:1:1)
-            at asyncGeneratorStep (some-file:1:1)
-            at _next (some-file:1:1)
-            at <anonymous> (some-file:1:1)
-            at <anonymous> (some-file:1:1)
-            at _jasmine (some-file:1:1)
+            at Runtime.requireModuleOrMock (some-file:1:1)
+            at Object.<anonymous> (some-file:1:1)
+            at Runtime._execModule (some-file:1:1)
+            at Runtime._loadModule (some-file:1:1)
+            at Runtime.requireModule (some-file:1:1)
             at jasmine2 (some-file:1:1)
-            at <anonymous> (some-file:1:1)
-            at asyncGeneratorStep (some-file:1:1)
-            at _next (some-file:1:1)
+            at runTestInternal (some-file:1:1)
     ]]>
     </failure>
   </testcase>
