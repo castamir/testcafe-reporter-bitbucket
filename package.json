@@ -29,7 +29,8 @@
     "ts:check": "tsc",
     "lint": "eslint --ext ts,tsx,js src",
     "test": "jest --coverage --watchAll=false --verbose false src",
-    "format": "prettier src/**/*.ts --write"
+    "format": "prettier src/**/*.ts --write",
+    "prepublish": "yarn ts:check && yarn test && yarn build"
   },
   "dependencies": {
     "indent-string": "~4.0.0",
